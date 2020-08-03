@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg2"
+    android:padding="20dp"
+    tools:context=".views.view.signup.SignUpScreen"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo_image_cardview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="80dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="12dp"
+        >
+    <ImageView
+        android:id="@+id/login_logo_image"
+        android:transitionName="logo_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/middlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/reg_signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="40sp"
+            android:transitionName="logo_text"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/reg_slogan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up to continue"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:transitionName="logo_desc"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_name_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            app:hintTextColor="@color/colorWhite"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            android:outlineAmbientShadowColor="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:id="@+id/signup_fullname_input"
+                android:maxLines="1"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_email_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextColor="@color/colorWhite"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            android:outlineAmbientShadowColor="@color/colorWhite"
+            android:hint="Email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_email_input"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_phoneNo_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextColor="@color/colorWhite"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            android:outlineAmbientShadowColor="@color/colorWhite"
+            android:hint="Mobile No"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:counterMaxLength="11"
+            app:counterOverflowTextColor="@color/colorRed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_phone_input"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_password_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:passwordToggleEnabled="true"
+            android:transitionName="password_tran"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextColor="@color/colorWhite"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            android:outlineAmbientShadowColor="@color/colorWhite"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_password_input"
+                android:inputType="textPassword"
+                android:maxLines="1">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_confirmpassword_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            app:passwordToggleEnabled="true"
+            android:transitionName="password_tran"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextColor="@color/colorWhite"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            android:outlineAmbientShadowColor="@color/colorWhite"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_confirmpassword_input"
+                android:inputType="textPassword"
+                android:maxLines="1">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+<!--
+    <Button
+        android:id="@+id/signup_reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/colorPrimary"
+        android:transitionName="button_tran"/>
+
+    <Button
+        android:id="@+id/signup_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button2"
+        android:textColor="@color/colorWhite"
+        android:text="Already have an account? LogIn"
+        android:layout_marginTop="10dp"
+        android:transitionName="login_signup_tran"
+        />
+-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signup_reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        app:cardCornerRadius="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/login_ProgressBar1"
+                style="@style/SpinKitView.Large.Circle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.github.ybq.android.spinkit.SpinKitView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIGNUP"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/signup_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="5dp"
+        android:background="@drawable/rounded_button2"
+        android:elevation="0dp"
+        android:text="Already have an account? LogIn"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

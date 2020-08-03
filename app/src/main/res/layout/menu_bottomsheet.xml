@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/menu_MenuBottomSheetLayout"
+    android:background="@color/colorWhite"
+    android:padding="16dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="?android:attr/actionBarSize"
+    >
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:background="@color/colorBottomLine"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="3dp"></View>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorMenuItem"
+        android:text="Menu"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        ></TextView>
+
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/item1_MenuBottomSheet"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home_primary_24dp"
+                ></ImageView>
+
+
+            <TextView
+                android:id="@+id/bottomsheet_HomeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Home"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorMenuItem"
+                android:layout_marginLeft="16dp"
+                ></TextView>
+        </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/item6_MenuBottomSheet"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_shopping_bag_filled"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/bottomsheet_Order_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="My Orders"
+            android:textSize="16sp"
+            android:textColor="@color/colorMenuItem"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            ></TextView>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/item2_MenuBottomSheet"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_local_pharmacy_primary_24dp"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/bottomsheet_PharmacyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Our Pharmacies"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorMenuItem"
+                android:layout_marginLeft="16dp"
+                ></TextView>
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/item3_MenuBottomSheet"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/brand_icon"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/bottomsheet_Brand_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Brands"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorMenuItem"
+                android:layout_marginLeft="16dp"
+                ></TextView>
+        </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icons8_news_250_1"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/bottomsheet_Articles_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Health Articles"
+                android:textSize="16sp"
+                android:textColor="@color/colorMenuItem"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                ></TextView>
+        </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+
+
+
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search_primary_light"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/bottomsheet_Search_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="Search"
+                android:textColor="@color/colorMenuItem"
+                android:textSize="16sp"></TextView>
+        </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_favorite_primary_24dp"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/bottomsheet_Favourite_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="Favourites"
+            android:textColor="@color/colorMenuItem"
+            android:textSize="16sp"></TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/item5_MenuBottomSheet"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons8_male_user_100_1"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/bottomsheet_Profile_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Profile"
+            android:textSize="16sp"
+            android:textColor="@color/colorMenuItem"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            ></TextView>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_signout"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/bottomsheet_Signout_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="Sign out"
+            android:textColor="@color/colorMenuItem"
+            android:textSize="16sp"></TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorBottomLine"></View>
+
+
+    <!-- Add Menu Item Above this-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorTransparent"></View>
+
+</LinearLayout>

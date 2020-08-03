@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/ProductList_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productId2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="16"
+                android:textColor="@color/colorTransparent"
+                android:textSize="5sp" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+
+                    android:id="@+id/productImage2"
+                    android:layout_width="125dp"
+                    android:layout_height="128dp"
+                    android:padding="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/no_image_available" />
+
+                <ImageView
+
+                    android:layout_width="125dp"
+                    android:layout_height="128dp"
+                    android:padding="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shadow_bottom_to_top" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ToggleButton
+                android:id="@+id/favouriteToggleButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/productImage"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:padding="8dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/favourite_toggle_selector"
+                android:layout_alignBaseline="@id/pharmacyName2"
+                android:visibility="gone"
+                ></ToggleButton>
+
+
+            <TextView
+                android:text="Similac"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/productName2"
+                android:layout_toRightOf="@id/imageCard"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/productDesc2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productName2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@id/imageCard"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:maxLines="2"
+                android:text="@string/dummy_Desc"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productDesc2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@id/imageCard"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:text="@string/price_Label"
+                android:textAllCaps="false"
+                android:textColor="@color/colorRed"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="0"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorRed"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/productPrice2"
+                android:layout_toRightOf="@id/priceLabel"
+                android:layout_below="@+id/productDesc"
+                android:layout_alignBaseline="@+id/priceLabel"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="In Stock:"
+                android:textSize="11sp"
+                android:textColor="@color/colorPrimaryText"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/available"
+                android:layout_toRightOf="@+id/imageCard"
+                android:layout_below="@+id/priceLabel"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Yes"
+                android:textSize="11sp"
+                android:textColor="@color/colorPrimaryText"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/availableText2"
+                android:layout_toRightOf="@+id/available"
+                android:layout_below="@+id/productPrice2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Fazal Din"
+                android:textSize="11sp"
+                android:textColor="@color/colorIcons"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/pharmacyName2"
+                android:layout_toRightOf="@+id/imageCard"
+                android:layout_below="@+id/available"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/favourite_Delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@id/pharmacyName2"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_trash_bin_red"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ProductList_RelativeLayout"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/favourite_AddtoCart"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Remove"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/favourite_AddtoCart"
+                android:src="@drawable/ic_delete_white_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.34"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/favourite_AddtoCart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

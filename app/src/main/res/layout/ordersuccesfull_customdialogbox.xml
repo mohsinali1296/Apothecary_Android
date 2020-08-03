@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/success_Animation"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_fileName="confetti_cannons.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/successText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/success_Animation"
+        android:text="Congratulations..!!"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/successmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/successText"
+        android:text="Your order has been placed successfuly.\n Please wait for order confirmation."
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/successmsg"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="Go to home"
+        android:textStyle="normal"
+        android:textSize="16sp"/>
+
+
+    <!--        <Button
+            android:id="@+id/Custom_Dialog_Close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Move to Home "
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            /> -->
+
+
+</RelativeLayout>

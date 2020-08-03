@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/changePassword_BottomSheetContainer"
+    android:background="@drawable/bottom_sheet_primary_background"
+    android:theme="@style/MaterialTheme"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="UPDATE ADDRESS"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_Divider"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bottomsheet_Address_textboxLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button2"
+        android:hint="Local Address"
+        android:outlineAmbientShadowColor="@color/colorWhite"
+        android:outlineSpotShadowColor="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:boxStrokeColor="@color/colorWhite"
+        app:hintTextColor="@color/colorWhite">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bottomsheet_LocalAddress_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bottomsheet_City_textboxLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button2"
+        android:hint="City"
+        android:outlineAmbientShadowColor="@color/colorWhite"
+        android:outlineSpotShadowColor="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:boxStrokeColor="@color/colorWhite"
+        app:hintTextColor="@color/colorWhite">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bottomsheet_City_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bottomsheet_Country_textboxLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button2"
+        android:hint="Country"
+        android:outlineAmbientShadowColor="@color/colorWhite"
+        android:outlineSpotShadowColor="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:boxStrokeColor="@color/colorWhite"
+        app:hintTextColor="@color/colorWhite">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bottomsheet_Country_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/bottomsheet_Update_Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_shape_white"
+        android:text="Update"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:layout_marginBottom="24dp"
+        />
+
+
+</LinearLayout>

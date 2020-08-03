@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.mainscreen.MainScreen">
+
+
+  <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:id="@+id/fragmentContainer"
+      >
+
+    </FrameLayout>
+
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:active_item_color="@color/colorPrimaryDark"
+        app:centre_button_color="@color/colorWhite"
+        app:inactive_item_color="@color/colorWhite"
+        app:space_background_color="@color/colorPrimary"
+        app:active_centre_button_icon_color="@color/colorWhite"
+        app:active_centre_button_background_color="@color/colorPrimary"
+        app:centre_button_icon="@drawable/icons8_home_250_1"
+        app:inactive_centre_button_icon_color="@color/colorPrimary"
+        app:space_item_icon_size="24dp"
+        app:space_item_icon_only_size="24dp"
+
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#07A3AD</color>
+    <color name="colorPrimaryDark">#057f87</color>
+    <color name="colorPrimaryDark2">#06919a</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name ="colorPrimaryLightBackground">#D9057f87</color>
+
+    <color name="colorNull">#00000000</color>
+    <color name="colorIcons">#7C7F81</color>
+    <color name="colorPrimaryText">#1e1e1e</color>
+    <color name="colorWhiteDark">#DBDBDB</color>
+    <color name="colorPrimaryLight">#09c7d3</color>
+    <color name="colorBackground">#F4F7F7</color>
+
+    <color name="colorShimmer">#DFDFDF</color>
+    <color name="colorMenuItem">#6e7f80</color>
+    <color name="colorBottomLine">#e7ebe8</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="orange">#FA6B1B</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorLightRed">#FF3333</color>
+    <color name="colorBlue">#0B5394</color>
+    <color name="colorGoldenYellow">#ffdf00</color>
+
+    <color name="colorDialogPrimary">#848cb7</color>
+    <color name="colorDialogPrimaryDark">#6d749f</color>
+    <color name="colorDialogRed">#ff3943</color>
+    <color name="colorDialogDarkRed">#801b20</color>
+    <color name="colorDialogGreenLight">#abffc0</color>
+    <color name="colorDialogGreen">#247b37</color>
+    <color name="colorDialogGreen1">#3eb959</color>
+    <color name="colorDialogAccent">#ff4081</color>
+
+    <color name="colorOwlBackground">#feefa1</color>
+    <color name="colorBottomShape_Owl">#77644c</color>
+    <color name="colorOwlText">#5b3909</color>
+
+    <color name="color_PrimaryText">#212121</color>
+    <color name="color_SecondaryText">#757575</color>
+    <color name="color_Divider">#ECECEC</color>
+
+
+</resources>

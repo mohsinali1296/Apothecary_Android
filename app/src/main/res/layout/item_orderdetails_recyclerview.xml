@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp"
+    >
+    <RelativeLayout
+        android:id="@+id/ProductList_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+
+                android:id="@+id/productImage"
+                android:layout_width="125dp"
+                android:layout_height="128dp"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/no_image_available" />
+
+            <ImageView
+
+                android:layout_width="125dp"
+                android:layout_height="142dp"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/shadow_bottom_to_top" />
+
+            <!-- android:scaleType="fitCenter"
+             android:src="@drawable/sample_image_meal"
+             android:layout_width="135dp"
+             android:layout_height="135dp"
+             android:background="@color/colorTransparent"
+             android:padding="8dp"-->
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+
+            android:id="@+id/productName"
+            android:text="Similac"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryText"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/imageCard"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/productDesc"
+            android:layout_below="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@id/imageCard"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="2"
+            android:text="@string/dummy_Desc"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/priceLabel"
+            android:text= "Total Price: "
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorRed"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/imageCard"
+            android:layout_below="@+id/productDesc"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+
+            android:id="@+id/TotalPrice"
+            android:text="0"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorRed"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/priceLabel"
+            android:layout_below="@+id/productDesc"
+            android:layout_alignBaseline="@+id/priceLabel"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:id="@+id/Quantity_Label"
+            android:text="Total Quantity:"
+            android:textSize="11sp"
+            android:textColor="@color/colorPrimaryText"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/imageCard"
+            android:layout_below="@+id/priceLabel"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/TotalQuantity"
+            android:text="2"
+            android:textSize="11sp"
+            android:textColor="@color/colorPrimaryText"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/Quantity_Label"
+            android:layout_below="@+id/TotalPrice"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Product_QtyType"
+            android:text="Quantity per Unit"
+            android:textSize="11sp"
+            android:textColor="@color/colorIcons"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/imageCard"
+            android:layout_below="@+id/Quantity_Label"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/PharmacyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Product_QtyType"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@+id/imageCard"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:text="Fazal Din"
+            android:textColor="@color/colorIcons"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorWhite"
+            android:elevation="6dp"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:text=" In Process "
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

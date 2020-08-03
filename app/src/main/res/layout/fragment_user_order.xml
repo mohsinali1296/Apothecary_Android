@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.view.userorder.UserOrderFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/order_AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppBarLayoutTheme2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/order_Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@color/colorWhite">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/order_CardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/ic_white_circle"
+                            android:src="@drawable/logo"></ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="My Order"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/order_CardView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_InnerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/order_AppBarLayout">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorPrimary"
+                ></View>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/order_ViewPagerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:foregroundGravity="center"
+                android:overScrollMode="never" />
+
+            <include android:id="@+id/shimmerNewsFeed"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/item_view_pager_header_shimmer"
+                android:layout_marginTop="16dp"
+                />
+
+              <RelativeLayout
+                android:id="@+id/order_MainContainer"
+                android:layout_below="@+id/order_ViewPagerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                  android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/order_AnimationBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/emptyList_Animation"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="empty_sad_shopping_bag.json"
+                    app:lottie_loop="true"/>
+
+
+            </RelativeLayout>
+
+                  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                      android:id="@+id/order_RefreshLayout"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginBottom="50dp">
+
+                      <androidx.core.widget.NestedScrollView
+                          android:id="@+id/order_NestedScrollView"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:background="@color/colorTransparent"
+                          android:scrollbars="none"
+                          >
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+
+                              <TextView
+                                  android:id="@+id/order_Title"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_alignParentStart="true"
+                                  android:text="Order History"
+                                  android:padding="8dp"
+                                  android:textColor="@color/colorPrimary"
+                                  android:layout_marginStart="16dp"
+                                  android:textSize="18sp"
+                                  android:textStyle="bold"
+                                  android:textAllCaps="true"/>
+
+                              <androidx.recyclerview.widget.RecyclerView
+                                  android:id="@+id/order_Recyclerview"
+                                  android:layout_marginLeft="8dp"
+                                  android:layout_marginRight="8dp"
+                                  android:layout_marginBottom="4dp"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@+id/order_Title"
+                                  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                  />
+
+                              <include android:id="@+id/shimmerOrder"
+                                  android:layout_below="@+id/order_Title"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  layout="@layout/products_recyclerview_shimmer" />
+
+
+                          </RelativeLayout>
+
+
+
+                      </androidx.core.widget.NestedScrollView>
+
+                      <com.github.ybq.android.spinkit.SpinKitView
+                          android:id="@+id/order_ScrollProgressBar"
+                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                          style="@style/SpinKitView.Large.ThreeBounce"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:layout_alignParentBottom="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_gravity="center"
+                          android:visibility="gone"
+                          app:SpinKit_Color="@color/colorPrimary"
+                          android:layout_marginBottom="60dp"
+                          />
+
+                  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

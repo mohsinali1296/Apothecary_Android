@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:elevation="10dp"
+     app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/postTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="16dp"
+            android:text="This is our Title Post. You can check that"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/postDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="8dp"
+            android:text="This will be our post description. It represent our post This will be our post description. It represent our post"
+
+            ></TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

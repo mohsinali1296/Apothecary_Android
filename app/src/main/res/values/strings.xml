@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Apothecary</string>
+
+
+    <string name="search_your_medicine">Search Your Medicine…</string>
+    <string name="meal_categories">Categories</string>
+    <string name="invalid_email_error">Please Enter a Valid Email Address</string>
+    <string name="invalid_password_error">Minimum 8 character are required. At least 1 Uppercase,1 Lowercase and 1 numeric character. No Special Characters and Spaces</string>
+    <string name="invalid_confirmpassword_error">Password does not match</string>
+    <string name="invalid_fullname_error">Enter Your Fullname. Only alphabets allowed.</string>
+    <string name="invalid_phone_error">Enter Valid Mobile Number. Minimum 11 characters</string>
+    <string name="invalid_localaddress_error">Please Enter your Address</string>
+    <string name="invalid_city_error">Please Enter your City</string>
+    <string name="invalid_country_error">Please Enter your Country</string>
+    <string name="price_Label">Price per Unit(Rs.):</string>
+    <string name="dummy_ProductName">Nestle Nan Pro 1</string>
+    <string name="dummy_Desc">Nestle Nan Pro 1 Starter Infant Formula Powder 400g</string>
+
+    <string name="category">Category</string>
+    <string name="subcategory">Sub Category</string>
+    <string name="brand">Brand</string>
+    <string name="country">Country</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="details">PRODUCT DETAILS</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="dot_loading">...</string>
+    <string name="Ingredients">INGREDIENTS</string>
+    <string name="youtube">YOUTUBE</string>
+    <string name="source">SOURCE</string>
+    <string name="favorite">Favorite</string>
+
+    <string name="positive_popup_text_default"></string>
+    <string name="positive_popup_title_default"></string>
+    <string name="negative_popup_text_default"></string>
+    <string name="negative_popup_title_default"></string>
+
+    <string name="uploadImages">Set your image</string>
+    <string name="msg_loading">Loading...</string>
+    <string name="msg_removing">Removing...</string>
+    <string name="msg_updating">Updating...</string>
+    <string name="msg_wait">Please wait... We are placing your order.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

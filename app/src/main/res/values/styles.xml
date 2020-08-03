@@ -1,0 +1,89 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+    <style name="CheckBox_CheckColor">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MaterialTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+    <!--Using template of theme-->
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="AppBarLayoutTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppBarLayoutTheme2" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorPrimaryLight</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+<item name="android:background">@color/colorTransparent</item>
+    </style>
+
+ <!--   <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorAccent">@color/color_Divider</item>
+        <item name="android:colorControlNormal">@color/colorGoldenYellow</item>
+    </style>
+
+    <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="ratingBarStyle">@style/MyRatingBar</item>
+    </style> -->
+
+    <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorGoldenYellow</item>
+        <item name="android:colorControlNormal">@color/color_Divider</item>
+    </style>
+
+<!--
+    <style name="mytoast">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">#fff</item>
+
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">#fff</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">#fff</item>
+
+        <item name="stLength">LONG</item> LONG or SHORT
+        <item name="stGravity">top</item> top or center
+        <item name="stRadius">5dp</item>
+        <item name="stFont">@font/retrofont</item>
+        <item name="stIconStart">@drawable/ic</item>
+        <item name="stIconEnd">@drawable/ic</item>
+    </style>
+ -->
+
+</resources>

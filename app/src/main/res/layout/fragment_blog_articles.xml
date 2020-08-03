@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.view.articles.BlogArticlesFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/blog_AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppBarLayoutTheme2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/pharmacy_Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@color/colorWhite">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pharmacy_CardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/ic_white_circle"
+                            android:src="@drawable/logo"></ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Blog Articles"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/pharmacy_CardView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/blog_AppBarLayout"
+
+            ></View>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:id="@+id/postRecyclerListFrag"
+            android:layout_below="@+id/blog_AppBarLayout"
+            />
+
+        <include
+            android:id="@+id/shimmerArticles"
+            layout="@layout/articles_recyclerview_shimmer"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:layout_below="@+id/blog_AppBarLayout"
+            />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/articleProgressBarFrag"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</FrameLayout>
