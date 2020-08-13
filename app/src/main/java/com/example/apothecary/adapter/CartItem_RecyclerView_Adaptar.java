@@ -64,30 +64,38 @@ public class CartItem_RecyclerView_Adaptar extends  RecyclerView.Adapter<CartIte
            // String strProductId = products.get(position).getProductId().toString();
             viewHolder.ProductName.setText(cartList.get(position).getProductName().toString());
             viewHolder.ProductDesc.setText(cartList.get(position).getItemDescription().toString());
-            viewHolder.TotalPrice.setText(cartList.get(position).getTotalPrice().toString());
+
             viewHolder.Qty.setText(cartList.get(position).getQuantity().toString());
             viewHolder.Pharmacy.setText(cartList.get(position).getPharmacyName().toString());
             viewHolder.CartType.setText(Integer.toString(cartList.get(position).getCartType()));
             viewHolder.PrescriptionText.setText(cartList.get(position).getPrecriptionRequired_Text());
 
-            if(cartList.get(position).getCategoryName().toString()!="Medicine"){
+            if(cartList.get(position).getCategoryId()!=48){
                 viewHolder.Price.setText(cartList.get(position).getUnitPrice().toString()+"/-");
+                viewHolder.TotalPrice.setText(cartList.get(position).getTotalPrice().toString());
             }else{
 
+                double total=0;
                 switch (cartList.get(position).getCartType()){
                     case 0:
                         viewHolder.Qty_Type.setText("Per Unit Price");
                         viewHolder.Price.setText(cartList.get(position).getUnitPrice().toString());
+                         total = cartList.get(position).getUnitPrice() * cartList.get(position).getQuantity();
+                        viewHolder.TotalPrice.setText(Double.toString(total));
                         break;
 
                     case 1:
                         viewHolder.Qty_Type.setText("Per Leaf Price");
                         viewHolder.Price.setText(cartList.get(position).getLeafPrice().toString());
+                        total = cartList.get(position).getLeafPrice() * cartList.get(position).getQuantity();
+                        viewHolder.TotalPrice.setText(Double.toString(total));
                         break;
 
                     case 2:
                         viewHolder.Qty_Type.setText("Per Box Price");
                         viewHolder.Price.setText(cartList.get(position).getBoxPrice().toString());
+                         total = cartList.get(position).getBoxPrice() * cartList.get(position).getQuantity();
+                        viewHolder.TotalPrice.setText(Double.toString(total));
                         break;
 
                 }

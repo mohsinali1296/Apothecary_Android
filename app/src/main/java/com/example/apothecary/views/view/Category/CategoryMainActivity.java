@@ -115,7 +115,8 @@ public class CategoryMainActivity extends AppCompatActivity implements CategoryV
         //setFloatingActionButton();
         productsArrayList = new ArrayList<>();
         linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
-        setFloatingActionButton();
+        //setFloatingActionButton();
+        //area_FloatingActionButton.setVisibility(View.INVISIBLE);
     }
 
 

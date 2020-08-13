@@ -81,7 +81,7 @@ public class RecyclerViewProductsByCategoryAdapter2
             }
 
 
-            if(products.get(position).getCategoryName()=="Medicine"){
+            if(products.get(position).getCategoryId()==48){
                 viewHolder.priceLabel.setText("Price per Tablet(Rs.):");
                 String strProductPrice = products.get(position).getUnitPrice().toString();
                 viewHolder.productPrice.setText(strProductPrice);

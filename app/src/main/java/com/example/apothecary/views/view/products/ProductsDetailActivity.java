@@ -358,7 +358,7 @@ public class ProductsDetailActivity extends AppCompatActivity  implements Produc
             available.setText("Yes");
         }
 
-        if(stocks.get(0).getCategoryName()=="Medicine"){
+        if(stocks.get(0).getCategoryId()==48){
             priceOfProduct.setText(stocks.get(0).getUnitPrice().toString());
             piece.setText("(per Tablet)");
 
@@ -621,7 +621,7 @@ public class ProductsDetailActivity extends AppCompatActivity  implements Produc
         AddCart addCart;
         Double totalPrice = 0.0;
 
-        if(Stocks.getCategoryName()!="Medicine"){
+        if(Stocks.getCategoryId()!=48){
             totalPrice = qty*Stocks.getUnitPrice();
         }else{
 
@@ -647,7 +647,7 @@ public class ProductsDetailActivity extends AppCompatActivity  implements Produc
 
         int cartId = Cart.getData().get(0).getCartId();
         Double totalPrice = 0.0;
-        if(Stocks.getCategoryName()!="Medicine"){
+        if(Stocks.getCategoryId()!=48){
             totalPrice = qty*Stocks.getUnitPrice();
         }else{
 

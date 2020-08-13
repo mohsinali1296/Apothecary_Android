@@ -52,7 +52,7 @@ public class ConfirmCart_Recyclerview_Adapter extends RecyclerView.Adapter<Confi
             viewHolder.Pharmacy.setText(cartList.get(position).getPharmacyName().toString());
             viewHolder.PrescriptionText.setText(cartList.get(position).getPrecriptionRequired_Text());
 
-            if(cartList.get(position).getCategoryName().toString()!="Medicine"){
+            if(cartList.get(position).getCategoryId()!=48){
                 viewHolder.Price.setText(cartList.get(position).getUnitPrice().toString()+"/-");
             }else{
 

@@ -213,6 +213,15 @@ public class CartFragment extends Fragment implements CartView {
             CART = cart;
             double Total_Amount=0.0;
             for(int i=0;i<cart.getData().size();i++){
+//                if(cart.getData().get(i).getCartType()==0){
+//                    Total_Amount+=cart.getData().get(i).getUnitPrice()*cart.getData().get(i).getQuantity();
+//                }
+//                if(cart.getData().get(i).getCartType()==1){
+//                    Total_Amount+=cart.getData().get(i).getLeafPrice()*cart.getData().get(i).getQuantity();
+//                }
+//                if(cart.getData().get(i).getCartType()==2){
+//                    Total_Amount+=cart.getData().get(i).getBoxPrice()*cart.getData().get(i).getQuantity();
+//                }
                 Total_Amount+=cart.getData().get(i).getTotalPrice();
             }
 

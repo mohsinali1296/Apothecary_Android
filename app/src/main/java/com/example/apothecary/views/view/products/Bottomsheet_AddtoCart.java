@@ -86,7 +86,7 @@ public class Bottomsheet_AddtoCart extends BottomSheetDialogFragment implements 
         switch (position){
             case 0:
                 //Toast.makeText(context,"type 0",Toast.LENGTH_SHORT).show();
-                if(stocks.getCategoryName()=="Medicine"){
+                if(stocks.getCategoryId()==48){
                     carttype=0;
                     ProductPrice.setText(Double.toString(stocks.getUnitPrice()));
                     Piece.setText(" (per Unit Tablet)");
@@ -104,7 +104,7 @@ public class Bottomsheet_AddtoCart extends BottomSheetDialogFragment implements 
 
             case 1:
                 //Toast.makeText(context,"type 1",Toast.LENGTH_SHORT).show();
-                if(stocks.getCategoryName()=="Medicine"){
+                if(stocks.getCategoryId()==48){
                     carttype=1;
                     ProductPrice.setText(Double.toString(stocks.getLeafPrice()));
                     Piece.setText(" (per Unit Leaf)");
@@ -116,7 +116,7 @@ public class Bottomsheet_AddtoCart extends BottomSheetDialogFragment implements 
 
             case 2:
                 //Toast.makeText(context,"type 2",Toast.LENGTH_SHORT).show();
-                if(stocks.getCategoryName()=="Medicine"){
+                if(stocks.getCategoryId()==48){
                     carttype=2;
                     ProductPrice.setText(Double.toString(stocks.getBoxPrice()));
                     Piece.setText(" (per Unit Pack)");
@@ -154,7 +154,7 @@ public class Bottomsheet_AddtoCart extends BottomSheetDialogFragment implements 
         ProductName.setText(stocks.getProductName());
         ProductDesc.setText(stocks.getItemDescription());
         Picasso.get().load(getImageUrl(stocks.getImage())).placeholder(R.drawable.ic_circle2).into(ProductImage);
-        if(stocks.getCategoryName()!="Medicine"){
+        if(stocks.getCategoryId()==48){
             spinnerLayout.setVisibility(View.VISIBLE);
             ProductPrice.setText(Double.toString(stocks.getUnitPrice()));
             Piece.setText(" (per Unit Price)");
@@ -175,7 +175,11 @@ public class Bottomsheet_AddtoCart extends BottomSheetDialogFragment implements 
 
     private void SetSpinner() {
 
-        if(stocks.getCategoryName()!="Medicine"){
+        if(stocks.getCategoryId()==48){
+            type[0]="Unit Piece";
+            type[1]="Leaf";
+            type[2]="Pack";
+        }else{
             type[0]="Unit Piece";
             type[1]="Leaf(Unavailable)";
             type[2]="Pack";

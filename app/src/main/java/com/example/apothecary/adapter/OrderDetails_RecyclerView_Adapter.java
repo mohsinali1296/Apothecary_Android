@@ -55,7 +55,7 @@ public class OrderDetails_RecyclerView_Adapter extends
         switch (orderDetails.get(position).getStockType()){
 
             case 0:
-                if(orderDetails.get(position).getCategoryName()=="Medicine"){
+                if(orderDetails.get(position).getCategoryId()==48){
                     viewHolder.Product_QtyType.setText("Quantity per Unit Tablet");
                 }
                 break;
