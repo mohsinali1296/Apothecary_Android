@@ -63,9 +63,9 @@ public class ApothecaryClient {
 
     private static OkHttpClient provideOkHttp() {
         return new OkHttpClient.Builder()
-                .connectTimeout(30, TimeUnit.SECONDS)
-                .writeTimeout(30, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .writeTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
                 .addNetworkInterceptor(provideLoggingInterceptor())
                 .build();
     }

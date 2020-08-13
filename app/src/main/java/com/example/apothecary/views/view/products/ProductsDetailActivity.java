@@ -562,36 +562,44 @@ public class ProductsDetailActivity extends AppCompatActivity  implements Produc
     @Override
     public void setPharmacyRatings(List<PharmacyRating> pharmacyRatings) {
 
-        PharmacyRating rating = pharmacyRatings.get(0);
-        int sumRating = rating.getRatingsum();
-        int rating1 = rating.getRating1();
-        int rating2 = rating.getRating2();
-        int rating3 = rating.getRating3();
-        int rating4 = rating.getRating4();
-        int rating5 = rating.getRating5();
+        if(pharmacyRatings.size()!=0){
 
-        double avg = Math.round(Double.valueOf(rating.getRatingavg().toString())*1000.0)/1000.0;
+            PharmacyRating rating = pharmacyRatings.get(0);
+            int sumRating = rating.getRatingsum();
+            int rating1 = rating.getRating1();
+            int rating2 = rating.getRating2();
+            int rating3 = rating.getRating3();
+            int rating4 = rating.getRating4();
+            int rating5 = rating.getRating5();
 
-        tv_AvgRating.setText(Double.toString(avg));
-        tv_TotalRating_Top.setText(Integer.toString(sumRating)+" Ratings");
-        tv_TotalRating_Bottom.setText(Integer.toString(sumRating));
-        tv_Rating1.setText(Integer.toString(rating1));
-        tv_Rating2.setText(Integer.toString(rating2));
-        tv_Rating3.setText(Integer.toString(rating3));
-        tv_Rating4.setText(Integer.toString(rating4));
-        tv_Rating5.setText(Integer.toString(rating5));
+            double avg = Math.round(Double.valueOf(rating.getRatingavg().toString())*1000.0)/1000.0;
 
-        int percent_Rating1 = (rating1/sumRating)*100;
-        int percent_Rating2 = (rating2/sumRating)*100;
-        int percent_Rating3 = (rating3/sumRating)*100;
-        int percent_Rating4 = (rating4/sumRating)*100;
-        int percent_Rating5 = (rating5/sumRating)*100;
+            tv_AvgRating.setText(Double.toString(avg));
+            tv_TotalRating_Top.setText(Integer.toString(sumRating)+" Ratings");
+            tv_TotalRating_Bottom.setText(Integer.toString(sumRating));
+            tv_Rating1.setText(Integer.toString(rating1));
+            tv_Rating2.setText(Integer.toString(rating2));
+            tv_Rating3.setText(Integer.toString(rating3));
+            tv_Rating4.setText(Integer.toString(rating4));
+            tv_Rating5.setText(Integer.toString(rating5));
 
-        ratingProgressBar1.setProgress(percent_Rating1);
-        ratingProgressBar2.setProgress(percent_Rating2);
-        ratingProgressBar3.setProgress(percent_Rating3);
-        ratingProgressBar4.setProgress(percent_Rating4);
-        ratingProgressBar5.setProgress(percent_Rating5);
+            int percent_Rating1 = (rating1/sumRating)*100;
+            int percent_Rating2 = (rating2/sumRating)*100;
+            int percent_Rating3 = (rating3/sumRating)*100;
+            int percent_Rating4 = (rating4/sumRating)*100;
+            int percent_Rating5 = (rating5/sumRating)*100;
+
+            ratingProgressBar1.setProgress(percent_Rating1);
+            ratingProgressBar2.setProgress(percent_Rating2);
+            ratingProgressBar3.setProgress(percent_Rating3);
+            ratingProgressBar4.setProgress(percent_Rating4);
+            ratingProgressBar5.setProgress(percent_Rating5);
+
+        }else{
+            UnCheckedAllStars();
+        }
+
+
 
 
     }
